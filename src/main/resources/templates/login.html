@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="loginAction" method="post">
+    <p> id  :<input name="userId" type="text" /></p>
+    <p> pwd  :<input name="userPassword" type="text"/></p>
+    <input type="submit">
+</form>
+
+// 디버그용 멤버 목록
+<table>
+    <tr>
+        <th> seq</th>
+        <th> id </th>
+        <th> pwd </th>
+        <th> name </th>
+        <th> addDate </th>
+        <th> upDate </th>
+    </tr>
+    <tr th:each = "user : ${users}">
+        <td th:text="${user.userSeq}"></td>
+        <td th:text="${user.userId}"></td>
+        <td th:text="${user.userPassword}"></td>
+        <td th:text="${user.userName}"></td>
+        <td th:text="${user.addDate}"></td>
+        <td th:text="${user.upDate}"></td>
+    </tr>
+</table>
+</body>
+</html>
